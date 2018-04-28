@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Booted")
@@ -21,6 +21,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var testButton: UIButton!
+    var isNone : Int = 0
+    
+    @IBAction func touch_testButton(_ sender: Any) {
+        testLabel.text = ""
+    }
 }
