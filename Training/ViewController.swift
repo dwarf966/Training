@@ -24,9 +24,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var testButton: UIButton!
-    var isNone : Int = 0
+    var count : Int = 0
     
     @IBAction func touch_testButton(_ sender: Any) {
         testLabel.text = ""
+        count = count + 1
     }
 }
