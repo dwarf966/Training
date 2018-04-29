@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="yvf-DW-Xup">
             <objects>
-                <viewController storyboardIdentifier="First" id="k1s-gV-UTT" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="First" id="k1s-gV-UTT" userLabel="Main View Controller" customClass="MainViewController" customModule="Training" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FFW-Gp-96U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
