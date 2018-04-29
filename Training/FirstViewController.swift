@@ -9,12 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Booted")
-        
         // Do any additional setup after loading the view, typically from a nib.
+        
+        print("Booted")
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,12 +21,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var testLabel: UILabel!
-    @IBOutlet weak var testButton: UIButton!
-    var count : Int = 0
-    
-    @IBAction func touch_testButton(_ sender: Any) {
-        testLabel.text = ""
-        count = count + 1
+    static func instantiateSubViewController() -> UIViewController? {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateInitialViewController()
+        
+        return initialViewController
     }
 }
