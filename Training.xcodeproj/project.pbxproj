@@ -14,6 +14,9 @@
 		190703F120934EB700B743A1 /* TrainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190703F020934EB700B743A1 /* TrainingUITests.swift */; };
 		1910D54A209615110006A563 /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1910D549209615110006A563 /* First.storyboard */; };
 		1910D54C209616640006A563 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910D54B209616640006A563 /* FirstViewController.swift */; };
+		1910D558209626780006A563 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1910D557209626780006A563 /* NextButton.swift */; };
+		19173ACC209B2A5D00CFA08F /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19173ACB209B2A5D00CFA08F /* FirstView.swift */; };
+		1942FDE32096CE7D00582E27 /* PrevButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1942FDE22096CE7D00582E27 /* PrevButton.swift */; };
 		1958C5122095701900F61913 /* TestLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958C5112095701900F61913 /* TestLabel.swift */; };
 		19E4CFC120943FF400FD129E /* Lyrics.txt in Resources */ = {isa = PBXBuildFile; fileRef = 19E4CFC020943FF400FD129E /* Lyrics.txt */; };
 /* End PBXBuildFile section */
@@ -49,6 +52,9 @@
 		190703F220934EB700B743A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1910D549209615110006A563 /* First.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
 		1910D54B209616640006A563 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		1910D557209626780006A563 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
+		19173ACB209B2A5D00CFA08F /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		1942FDE22096CE7D00582E27 /* PrevButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrevButton.swift; sourceTree = "<group>"; };
 		1958C5112095701900F61913 /* TestLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLabel.swift; sourceTree = "<group>"; };
 		19E4CFC020943FF400FD129E /* Lyrics.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Lyrics.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +107,9 @@
 		190703CF20934EA800B743A1 /* Training */ = {
 			isa = PBXGroup;
 			children = (
-				1910D54D209619BA0006A563 /* StoryBoards */,
+				19173ACA209B2A2E00CFA08F /* Main */,
+				1910D559209633FB0006A563 /* ViewController */,
+				1910D54D209619BA0006A563 /* StoryBoard */,
 				1958C51020956FF300F61913 /* UIPart */,
 				190703D020934EA800B743A1 /* AppDelegate.swift */,
 				190703D720934EB700B743A1 /* Assets.xcassets */,
@@ -129,20 +137,37 @@
 			path = TrainingUITests;
 			sourceTree = "<group>";
 		};
-		1910D54D209619BA0006A563 /* StoryBoards */ = {
+		1910D54D209619BA0006A563 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
 				190703D920934EB700B743A1 /* LaunchScreen.storyboard */,
 				1910D549209615110006A563 /* First.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		1910D559209633FB0006A563 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
 				1910D54B209616640006A563 /* FirstViewController.swift */,
 			);
-			path = StoryBoards;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		19173ACA209B2A2E00CFA08F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				19173ACB209B2A5D00CFA08F /* FirstView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		1958C51020956FF300F61913 /* UIPart */ = {
 			isa = PBXGroup;
 			children = (
 				1958C5112095701900F61913 /* TestLabel.swift */,
+				1910D557209626780006A563 /* NextButton.swift */,
+				1942FDE22096CE7D00582E27 /* PrevButton.swift */,
 			);
 			path = UIPart;
 			sourceTree = "<group>";
@@ -280,7 +305,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1910D54C209616640006A563 /* FirstViewController.swift in Sources */,
+				19173ACC209B2A5D00CFA08F /* FirstView.swift in Sources */,
 				1958C5122095701900F61913 /* TestLabel.swift in Sources */,
+				1910D558209626780006A563 /* NextButton.swift in Sources */,
+				1942FDE32096CE7D00582E27 /* PrevButton.swift in Sources */,
 				190703D120934EA800B743A1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

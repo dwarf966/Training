@@ -9,32 +9,32 @@ import Foundation
 import UIKit
 
 class TestLabel: UILabel {
-    /*
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.frame = CGRect(x:50,y:50,width: 250,height:250)
+        self.font = UIFont.systemFont(ofSize: 30)
+        self.text = "Want You Gone"
     }
     
     required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)!
+        //fatalError("init(coder:) has not been implemented")
     }
-    */
     
     //self.frame = CGRect(x:50,y:50,width: 250,height:250)
     
     override var text: String? {
         didSet {
-            print("Text changed : " + oldValue! + " -> " + text!)
+            //print("Text changed : " + oldValue! + " -> " + text!)
             
             //########################## Bound ##########################
             //UIView.animate(withDuration: TimeInterval)  :  TimeInterval = How time does it take
             //scaleX: 0.5, y: 0.5 = Finally scale
-            UIView.animate(withDuration: 0.3) {
-                self.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            UIView.animate(withDuration: 0.25) {
+                self.transform = CGAffineTransform(scaleX: 0.4, y: 0.4)
             }
             
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: 0.25) {
                 self.transform = CGAffineTransform(scaleX: 1, y: 1)
             }
             //###########################################################

@@ -11,7 +11,8 @@ import UIKit
 class FirstViewController: UIViewController {
     let filename : String = "Lyrics"
     var fileBody : String? = nil
-    var lines : [String] = []
+    public static var lines : [String] = []
+    public static var count : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +31,20 @@ class FirstViewController: UIViewController {
         }
         
         var lineIndex = 0
-        
+        //行ごとに配列に追加
         fileBody!.enumerateLines { line, stop in
             if line != ""{
-                self.lines.append(line)
+                FirstViewController.lines.append(line)
                 lineIndex += 1
             }
-            
         }
+        
+        // 画面サイズを初期値として `MainView` クラスを `mainView` としてインスタンス化します。
+        let firstView = FirstView(frame: self.view.bounds)
+        // `MainView` に自動サイズ調整用に `autoresizingMask` を設定
+        firstView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        // `mainView` オブジェクトを表示します。
+        self.view.addSubview(firstView)
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,35 +52,15 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    static func instantiateSubViewController() -> UIViewController? {
-        let storyboard = UIStoryboard(name: "Second", bundle: nil)
-        let initialViewController = storyboard.instantiateInitialViewController()
-        
-        return initialViewController
-    }
-    
-    @IBOutlet weak var testLabel : UILabel! = TestLabel()
-    @IBOutlet weak var testButton: UIButton!
-    var count : Int = 0
-    
-    @IBAction func touch_testButton(_ sender: Any) {
-        if count >= lines.endIndex {
-            touch_ResetButton(self)
-        } else {
-            testLabel.text = self.lines[count]
-            count += 1
-        }
-    }
-    
     @IBAction func touch_ResetButton(_ sender: Any) {
-        if count != 0
+        print("tapped reset")
+        if FirstViewController.count != 0
         {
-            testLabel.text = "Want You Gone"
-            count = 0
+            FirstView().testLabel.text = "Want You Gone"
+            FirstViewController.count = 0
             print("Reseted")
         } else {
-            print("Did not reset")
+            print("Did not reseted")
         }
-        
     }
 }
