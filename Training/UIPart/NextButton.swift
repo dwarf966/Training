@@ -9,6 +9,7 @@
 import UIKit
 
 class NextButton: UIButton {
+    static var isAfterPrev = false
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -23,16 +24,23 @@ class NextButton: UIButton {
     
     @objc func touched(sender: UIButton) {
         print("tapped next")
-        print(FirstViewController.count)
-        print(FirstViewController.lines[FirstViewController.count])
+        
+        PrevButton.isAfterNext = true
+        
+        if NextButton.isAfterPrev == true {
+            FirstViewController.count += 1
+            NextButton.isAfterPrev = false
+        }
         
         if FirstViewController.count >= FirstViewController.lines.endIndex {
             FirstViewController().touch_ResetButton(self)
-            
         } else {
-            //FirstViewController.lines[FirstViewController.count]
+            FirstView.testLabel.text = FirstViewController.lines[FirstViewController.count]
             FirstViewController.count += 1
         }
+        
+        print(FirstViewController.count)
+        print(FirstViewController.lines[FirstViewController.count])
     }
     
     //frame = CGRect(x: 0, y: 50, width: FirstViewController().view.frame.width, height: FirstViewController().view.frame.height / 4)

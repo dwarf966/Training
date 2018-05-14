@@ -12,6 +12,13 @@ class TestLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        /*self.font = UIFont.systemFont(ofSize: FirstView().bounds.width/12)
+        
+        let testLabelSize = self.sizeThatFits(FirstView().bounds.size)
+        let testLabelX = (FirstView().bounds.width - testLabelSize.width) / 2
+        let testLabelY = (FirstView().bounds.height - testLabelSize.height) / 4
+        let testLabelOrigin = CGPoint(x: testLabelX, y: testLabelY)
+        self.frame = CGRect(origin: testLabelOrigin, size: testLabelSize)*/
         self.text = "Want You Gone"
     }
     

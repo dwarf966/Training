@@ -9,6 +9,7 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    let firstView : UIView = FirstView()
     let filename : String = "Lyrics"
     var fileBody : String? = nil
     public static var lines : [String] = []
@@ -56,7 +57,7 @@ class FirstViewController: UIViewController {
         print("tapped reset")
         if FirstViewController.count != 0
         {
-            FirstView().testLabel.text = "Want You Gone"
+            FirstView.testLabel.text = "Want You Gone"
             FirstViewController.count = 0
             print("Reseted")
         } else {
