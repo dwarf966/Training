@@ -11,6 +11,9 @@ import UIKit
 class PrevButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        self.setTitle("Prev", for: .normal)
+        
         self.addTarget(self, action: #selector(touched), for: .touchDown)
     }
     

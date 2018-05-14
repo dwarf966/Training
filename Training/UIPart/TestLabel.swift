@@ -5,14 +5,13 @@
 //  Created by 内藤生真 on 2018/04/29.
 //  Copyright © 2018年 内藤生真. All rights reserved.
 //
-import Foundation
+
 import UIKit
 
 class TestLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.font = UIFont.systemFont(ofSize: 30)
         self.text = "Want You Gone"
     }
     
@@ -28,6 +27,7 @@ class TestLabel: UILabel {
             //print("Text changed : " + oldValue! + " -> " + text!)
             
             //########################## Bound ##########################
+            
             //UIView.animate(withDuration: TimeInterval)  :  TimeInterval = How time does it take
             //scaleX: 0.5, y: 0.5 = Finally scale
             UIView.animate(withDuration: 0.25) {
@@ -37,6 +37,7 @@ class TestLabel: UILabel {
             UIView.animate(withDuration: 0.25) {
                 self.transform = CGAffineTransform(scaleX: 1, y: 1)
             }
+            
             //###########################################################
         }
     }

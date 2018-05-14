@@ -12,8 +12,7 @@ class NextButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.titleLabel?.text = "Next"
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 25)
+        self.setTitle("Next", for: .normal)
         
         self.addTarget(self, action: #selector(touched), for: .touchDown)
     }
