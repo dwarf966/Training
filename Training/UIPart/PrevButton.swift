@@ -43,9 +43,6 @@ class PrevButton: UIButton {
         }
         
         FirstView.testLabel.text = FirstViewController.lines[FirstViewController.count]
-        
-        print(FirstViewController.count)
-        print(FirstViewController.lines[FirstViewController.count])
     }
 }
 

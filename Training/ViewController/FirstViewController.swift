@@ -14,6 +14,7 @@ class FirstViewController: UIViewController {
     var fileBody : String? = nil
     public static var lines : [String] = []
     public static var count : Int = 0
+    public static var isAfterReset: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,12 +54,13 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func touch_ResetButton(_ sender: Any) {
+    static func touch_ResetButton() {
         print("tapped reset")
         if FirstViewController.count != 0
         {
             FirstView.testLabel.text = "Want You Gone"
             FirstViewController.count = 0
+            isAfterReset = true
             print("Reseted")
         } else {
             print("Did not reseted")

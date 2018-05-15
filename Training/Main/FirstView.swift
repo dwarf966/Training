@@ -36,23 +36,20 @@ class FirstView: UIView {
         let testLabelSize = FirstView.testLabel.sizeThatFits(self.bounds.size)
         let testLabelX = (self.bounds.width - testLabelSize.width) / 2
         let testLabelY = (self.bounds.height - testLabelSize.height) / 4
-        let testLabelOrigin = CGPoint(x: testLabelX, y: testLabelY)
-        FirstView.testLabel.frame = CGRect(origin: testLabelOrigin, size: testLabelSize)
+        FirstView.testLabel.frame = CGRect(x: testLabelX, y: testLabelY, width: testLabelSize.width, height: testLabelSize.height)
         
         self.nextButton.titleLabel?.font = UIFont.systemFont(ofSize: self.bounds.width/13)
         
         let nextButtonSize = self.nextButton.sizeThatFits(self.bounds.size)
         let nextButtonX = (self.bounds.width - nextButtonSize.width) / 1.25
         let nextButtonY = (self.bounds.height - nextButtonSize.height) / 1.5
-        let nextButtonOrigin = CGPoint(x: nextButtonX, y: nextButtonY)
-        self.nextButton.frame = CGRect(origin: nextButtonOrigin, size: nextButtonSize)
+        self.nextButton.frame = CGRect(x: nextButtonX, y: nextButtonY, width: nextButtonSize.width, height: nextButtonSize.height)
         
         self.prevButton.titleLabel?.font = UIFont.systemFont(ofSize: self.bounds.width/13)
         
         let prevButtonSize = self.prevButton.sizeThatFits(self.bounds.size)
         let prevButtonX = (self.bounds.width - prevButtonSize.width) / 4
         let prevButtonY = (self.bounds.height - prevButtonSize.height) / 1.5
-        let prevButtonOrigin = CGPoint(x: prevButtonX, y: prevButtonY)
-        self.prevButton.frame = CGRect(origin: prevButtonOrigin, size: prevButtonSize)
+        self.prevButton.frame = CGRect(x: prevButtonX, y: prevButtonY, width: prevButtonSize.width, height: prevButtonSize.height)
     }
 }

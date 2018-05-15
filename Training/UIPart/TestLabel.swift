@@ -20,6 +20,9 @@ class TestLabel: UILabel {
         let testLabelOrigin = CGPoint(x: testLabelX, y: testLabelY)
         self.frame = CGRect(origin: testLabelOrigin, size: testLabelSize)*/
         self.text = "Want You Gone"
+        self.lineBreakMode = .byWordWrapping
+        self.textAlignment = NSTextAlignment.center
+        self.numberOfLines = 3
     }
     
     required init(coder aDecoder: NSCoder) {

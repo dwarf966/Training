@@ -16,6 +16,7 @@ class NextButton: UIButton {
         self.setTitle("Next", for: .normal)
         
         self.addTarget(self, action: #selector(touched), for: .touchDown)
+        print(FirstViewController.lines.endIndex)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,16 +32,24 @@ class NextButton: UIButton {
             FirstViewController.count += 1
             NextButton.isAfterPrev = false
         }
+        /*
+        if FirstViewController.isAfterReset == true {
+            FirstView.testLabel.text = FirstViewController.lines[FirstViewController.count]
+        } else {
+            if FirstViewController.count >= FirstViewController.lines.endIndex {
+                FirstViewController.touch_ResetButton()
+            } else {
+                FirstView.testLabel.text = FirstViewController.lines[FirstViewController.count]
+                FirstViewController.count += 1
+            }
+        }*/
         
         if FirstViewController.count >= FirstViewController.lines.endIndex {
-            FirstViewController().touch_ResetButton(self)
+            FirstViewController.touch_ResetButton()
         } else {
             FirstView.testLabel.text = FirstViewController.lines[FirstViewController.count]
             FirstViewController.count += 1
         }
-        
-        print(FirstViewController.count)
-        print(FirstViewController.lines[FirstViewController.count])
     }
     
     //frame = CGRect(x: 0, y: 50, width: FirstViewController().view.frame.width, height: FirstViewController().view.frame.height / 4)
